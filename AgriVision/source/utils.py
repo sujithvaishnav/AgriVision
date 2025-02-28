@@ -1,9 +1,6 @@
 import requests
 from datetime import datetime
 
-AGROMONITORING_API_KEY = "dfed845ac12c92a43c126aa42f94fb89"
-OPENWEATHERMAP_API_KEY = "b98f28726ebfd5e4053e3939d22fe1af"
-HUGGINGFACE_AI_KEY="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"
 def get_soil_data(lat, lon):
     url = f"https://rest.isric.org/soilgrids/v2.0/properties/query?lat={lat}&lon={lon}"
     try:
