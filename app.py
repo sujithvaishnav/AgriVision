@@ -8,6 +8,7 @@ from PIL import Image
 import numpy as np
 import tensorflow as tf
 import os
+from google.cloud import translate_v2 as translate
 
 app = Flask(__name__)
 
@@ -242,6 +243,31 @@ def predict():
         return jsonify({"predicted_class": int(predicted_class)})
     else:
         return jsonify({"error": "Invalid file type"}), 400
+    
+@app.route('/translate', methods=['POST'])
+def translate_description():
+    try:
+        data = request.json
+        description = data.get("description")
+        language = data.get("language", "en")  # Default to English if missing
+
+        if not description:
+            return jsonify({"error": "No text provided"}), 400
+
+        service_account_path = os.path.join(os.getcwd(), "api.json")
+        if not os.path.exists(service_account_path):
+            return jsonify({"error": "Missing API key file"}), 500
+
+        # Initialize Google Translate Client
+        client = translate.Client.from_service_account_json(service_account_path)
+        
+        # Corrected method usage
+        result = client.translate(description, target_language=language)
+
+        return jsonify({"translated_text": result["translatedText"]})
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
     logging.info("Starting Flask server on http://127.0.0.1:5000")
