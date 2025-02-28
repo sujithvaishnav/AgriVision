@@ -8,7 +8,7 @@ ENV APP_HOME /back-end
 WORKDIR $APP_HOME
 COPY . ./
 
-RUN pip install --no-cache-dir --upgrade pip
+RUN pip install --no-cache-dir --upgrade pip setuptools wheel
 RUN pip install --no-cache-dir -r requirements.txt
 
 #Run the web service on the container startup. here we use gunicorn
