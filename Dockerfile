@@ -1,5 +1,5 @@
 #DockerFile
-FROM python:3.10.0-bookworm
+FROM python:3.10.0
 
 #Allow statements and log messages to immediately appears in the logs
 ENV PYTHONUNBUFFERED True
