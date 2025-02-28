@@ -31,7 +31,7 @@ def get_soil_data(lat, lon):
         return {"error": f"Failed to fetch soil data: {e}"}
 
 def get_weather_data(lat, lon):
-    url = f"http://api.agromonitoring.com/agro/1.0/weather?lat={lat}&lon={lon}&appid={AGROMONITORING_API_KEY}"
+    url = f"http://api.agromonitoring.com/agro/1.0/weather?lat={lat}&lon={lon}&appid={os.getenv("AGROMONITORING_API_KEY")}"
     res = requests.get(url)
     data = res.json()
     temp = data.get("main", {}).get("temp")
@@ -49,7 +49,7 @@ def get_combined_data(lat, lon):
     return {**soil, **weather}
 
 def get_weather_forecast(lat, lon):
-    url = f"https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={OPENWEATHERMAP_API_KEY}&units=metric"
+    url = f"https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={os.getenv("OPENWEATHERMAP_API_KEY")}&units=metric"
     try:
         res = requests.get(url)
         res.raise_for_status()
@@ -95,7 +95,7 @@ def get_weather_forecast(lat, lon):
         return {"error": f"Failed to fetch weather forecast: {e}"}
 
 def get_today_forecast(lat, lon):
-    url = f"https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={OPENWEATHERMAP_API_KEY}&units=metric"
+    url = f"https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={os.getenv("OPENWEATHERMAP_API_KEY")}&units=metric"
     try:
         res = requests.get(url)
         res.raise_for_status()
@@ -122,7 +122,7 @@ def get_today_forecast(lat, lon):
         return {"error": f"Failed to fetch today's forecast: {e}"}
 
 def get_soil_moisture(lat, lon):
-    url = f"http://api.agromonitoring.com/agro/1.0/soil?lat={lat}&lon={lon}&appid={AGROMONITORING_API_KEY}"
+    url = f"http://api.agromonitoring.com/agro/1.0/soil?lat={lat}&lon={lon}&appid={os.getenv("AGROMONITORING_API_KEY")}"
     try:
         res = requests.get(url)
         res.raise_for_status()
@@ -204,7 +204,7 @@ def get_fertilizer_recommendation(soil_data, crop):
 def get_ai_response(prompt):
     """With improved error handling"""
     url = "https://api-inference.huggingface.co/models/HuggingFaceH4/zephyr-7b-beta"
-    headers = {"Authorization": f"Bearer {HUGGINGFACE_AI_KEY}"}
+    headers = {"Authorization": f"Bearer {os.getenv("HUGGINGFACE_AI_KEY")}"}
     payload = {
         "inputs": prompt,
         "parameters": {
