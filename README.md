@@ -51,19 +51,17 @@ AgriVision is an advanced AI-powered mobile application designed to assist farme
 ## Screenshots
 
 ### 📌 Home Page
-![Home Page](screenshots/home.png)
+![Home Page](screenshots/home.jpg)
 
-### 🌦 Weather Forecast
-![Weather Forecast](screenshots/weather.png)
-
-### 🌱 Crop Recommendation
-![Crop Recommendation](screenshots/crop_recommendation.png)
+### 🌱 Crop Recommendation and Fertilizer Recommendation
+![Crop Recommendation](screenshots/crop_recommendation.jpg)
+![Fertilizer Recommendation](screenshots/fertilizer_recommendation.jpg)
 
 ### 🦠 Disease & Pest Classification
-![Disease & Pest Classification](screenshots/disease_classification.png)
+![Disease & Pest Classification](screenshots/disease_classification.jpg)
 
-### 🛠 Settings (Local Language Support)
-![Settings](screenshots/settings.png)
+### 🛠 Local Language Support
+![Settings](screenshots/Language.jpg)
 
 
 ## Contributing
