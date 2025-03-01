@@ -31,7 +31,9 @@ AgriVision is an AI-powered mobile application designed to assist farmers by pro
 ## 🖼 Sample Dataset Image
 The AI model powering the disease classification feature has been trained on real-world plant images. Below is an example of a dataset image used for training:
 
-![Sample Dataset Image](screenshots/sample_dataset.jpg)
+<p align="center">
+  <img src="screenshots/sample_dataset.jpg" alt="Sample Dataset Image" width="300">
+</p>
 
 Download sample dataset image: [sample_dataset.jpg](https://github.com/sujithvaishnav/AgriVision/raw/main/screenshots/sample_dataset.jpg)
 
@@ -42,15 +44,19 @@ Download sample dataset image: [sample_dataset.jpg](https://github.com/sujithvai
 ### Home Page
 A simple and intuitive dashboard to navigate through the app features.
 
-![Home Page](screenshots/home.jpg)
+<p align="center">
+  <img src="screenshots/home.jpg" alt="Home Page" width="250">
+</p>
 
 Download: [home.jpg](https://github.com/sujithvaishnav/AgriVision/raw/main/screenshots/home.jpg)
 
 ### Crop & Fertilizer Recommendation
 Accurate suggestions based on soil and weather conditions.
 
-![Crop Recommendation](screenshots/crop_recommendation.jpg)
-![Fertilizer Recommendation](screenshots/fertilizer_recommendation.jpg)
+<p align="center">
+  <img src="screenshots/crop_recommendation.jpg" alt="Crop Recommendation" width="250">
+  <img src="screenshots/fertilizer_recommendation.jpg" alt="Fertilizer Recommendation" width="250">
+</p>
 
 Download: [crop_recommendation.jpg](https://github.com/sujithvaishnav/AgriVision/raw/main/screenshots/crop_recommendation.jpg)  
 Download: [fertilizer_recommendation.jpg](https://github.com/sujithvaishnav/AgriVision/raw/main/screenshots/fertilizer_recommendation.jpg)
@@ -58,14 +64,18 @@ Download: [fertilizer_recommendation.jpg](https://github.com/sujithvaishnav/Agri
 ### Disease & Pest Classification
 Easily detect plant diseases and pests using AI-powered classification.
 
-![Disease & Pest Classification](screenshots/disease_classification.jpg)
+<p align="center">
+  <img src="screenshots/disease_classification.jpg" alt="Disease & Pest Classification" width="250">
+</p>
 
 Download: [disease_classification.jpg](https://github.com/sujithvaishnav/AgriVision/raw/main/screenshots/disease_classification.jpg)
 
 ### Local Language Support
 Farmers can access all features in their preferred language.
 
-![Settings](screenshots/language.jpg)
+<p align="center">
+  <img src="screenshots/language.jpg" alt="Local Language Support" width="250">
+</p>
 
 Download: [language.jpg](https://github.com/sujithvaishnav/AgriVision/raw/main/screenshots/language.jpg)
 
