@@ -108,6 +108,8 @@ pip install -r requirements.txt
 
 # Run the application
 python app.py
+
+# Change the link in the App with the local server given by the program
 ```
 
 ---
