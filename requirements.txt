@@ -1,5 +1,6 @@
 absl-py==2.1.0
 astunparse==1.6.3
+beautifulsoup4==4.13.3
 blinker==1.9.0
 cachetools==5.5.2
 certifi==2025.1.31
@@ -13,6 +14,7 @@ flask-cors==5.0.1
 flatbuffers==25.2.10
 fonttools==4.56.0
 gast==0.6.0
+google==3.0.0
 google-api-core==2.24.1
 google-auth==2.38.0
 google-cloud-core==2.4.2
@@ -60,10 +62,12 @@ scikit-learn==1.6.1
 scipy==1.15.2
 seaborn==0.13.2
 six==1.17.0
+soupsieve==2.6
 tensorboard==2.18.0
 tensorboard-data-server==0.7.2
 tensorflow==2.18.0
 tensorflow-io-gcs-filesystem==0.31.0
+tensorflow_intel==2.18.0
 termcolor==2.5.0
 threadpoolctl==3.5.0
 typing_extensions==4.12.2
